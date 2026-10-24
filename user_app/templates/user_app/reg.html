@@ -1,0 +1,18 @@
+{% load static%}
+<form action="{% url 'reg'%}" method="post" id = "regForm">
+    <div class = "choose">
+        <h1 class = "active" >Регістрація</h1>
+        <h1>Авторізація</h1>
+    </div>
+    <h1 class = "formTitle">Приєднуйся до World IT</h1>
+    <div class = "formContent">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button id = "regButton" class = "formButton">Зарегіструватись</button>
+    <div>
+</form>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Зареєструватися</button>
+</form>

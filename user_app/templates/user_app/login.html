@@ -1,0 +1,12 @@
+{% load static%}
+<form action="{% url 'login' %}" method="post" id = "loginForm">
+    <div class = "choose">
+        <h1 >Регістрація</h1>
+        <h1 class = "active" >Авторізація</h1>
+    </div>
+    <div class = "formContent">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button id = "formButton" class = "formButton">Зарегіструватись</button>
+    <div>
+</form>

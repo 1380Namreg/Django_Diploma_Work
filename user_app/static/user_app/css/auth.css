@@ -1,0 +1,30 @@
+
+h1 {
+  font-family: "GT Walsheim Pro", sans-serif;
+}
+div h1{
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 40px;
+  color: #0c0c0c;
+  margin-bottom: 10px;
+}
+div button{
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 15px;
+  color: rgb(84, 60, 82);
+  margin-bottom: 10px;
+}
+
+#formTitle{
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 20px;
+  color: #0c0c0c;
+  margin-bottom: 10px;
+}
+.active{
+  color: #0c0c0c;
+  font-size: 10px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
