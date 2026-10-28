@@ -3,9 +3,11 @@
 
 {%block content%}
 <main>
-    {% include "user_app/reg.html"%}
+   
     {% include "user_app/login.html"%}
+    {% include "user_app/reg.html"%}
 </main>
+
 {% endblock %}
 
 {% block links%}
@@ -13,5 +15,5 @@
 {% endblock %}
 
 {% block scripts%}
-<script src = "{% static 'user_app/js/auth.js'%}"></script>
+    <script src="{% static 'user_app/js/auth.js' %}"></script>
 {% endblock %}

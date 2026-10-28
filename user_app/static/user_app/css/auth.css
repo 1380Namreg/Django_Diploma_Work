@@ -2,29 +2,92 @@
 h1 {
   font-family: "GT Walsheim Pro", sans-serif;
 }
-div h1{
-  font-family: "GT Walsheim Pro", sans-serif;
-  font-size: 40px;
-  color: #0c0c0c;
-  margin-bottom: 10px;
-}
-div button{
-  font-family: "GT Walsheim Pro", sans-serif;
-  font-size: 15px;
-  color: rgb(84, 60, 82);
-  margin-bottom: 10px;
-}
+
+.title{
+  font-family: GT Walsheim Pro;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 34px;
+  line-height: 100%;
+  letter-spacing: -1%;
+  text-align: center;}
 
 #formTitle{
-  font-family: "GT Walsheim Pro", sans-serif;
-  font-size: 20px;
-  color: #0c0c0c;
-  margin-bottom: 10px;
+  font-family: GT Walsheim Pro;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -1%;
+  text-align: center;
+
 }
-.active{
-  color: #0c0c0c;
-  font-size: 10px;
-  font-family: "GT Walsheim Pro", sans-serif;
-  margin-bottom: 10px;
-  font-weight: bold;
+body{
+
+  border-radius: 20px;
+
+
+  padding: 0px;
+  background: rgba(233, 229, 238, 1);
+
+
+}
+
+.form{
+  width: 600px;
+  height: 552;
+  top: 236px;  
+  left: 248.52px;
+  border-radius: 20px;
+  padding: 44px;
+  gap: 36px;
+  background: white;
+  margin: 100px;
+
+}
+
+
+
+.choose{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.formContent{
+  display: flex;
+  flex-direction: column;
+
+}
+
+#header{
+  display: flex;
+  flex-direction: row;
+  height: 88;
+  background: white;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 88px;
+  width:100%;
+  align-items:center;
+  
+
+} 
+
+#home_link{
+  position: absolute;
+  
+  left: 50%;
+ 
+}
+.formButton{
+  width: 512px;
+  height: 48px;
+  left: 44px;
+  top: 460px;
+  border-radius: 60px;
+  background: #5C4D7D;
+  color: white;
 }
