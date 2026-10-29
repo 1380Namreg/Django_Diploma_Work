@@ -1,6 +1,8 @@
 const LoginForm = document.getElementById('loginForm');
 const RegisterForm = document.getElementById('regForm');
 
+LoginForm.hidden = true
+
 function show(show) {
     LoginForm.hidden = !show;
     RegisterForm.hidden = show;
