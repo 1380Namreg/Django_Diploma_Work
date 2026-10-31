@@ -3,9 +3,20 @@
 
 {%block content%}
 <main>
-   
-    {% include "user_app/login.html"%}
-    {% include "user_app/reg.html"%}
+    <div id="wraper">
+        <div id = "form_wraper">
+            <span id = "choose">
+                <h1 class = "title" id = "reg">Регістрація</h1>
+                <h1 class = "title" id = 'login'>Авторізація</h1>
+            </span>
+            <p id = "formTitle">Приєднуйся до World IT</p>
+            <div id = "formContent">
+                {% include "user_app/login.html"%}
+                {% include "user_app/reg.html"%}
+            </div>
+        </div>
+            <img src="{% static 'user_app/media/img/Container.png' %}" alt="Container" id = "laptop_image">
+    </div>
 </main>
 
 {% endblock %}
