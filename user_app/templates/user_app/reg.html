@@ -1,8 +1,11 @@
 {% load static%}
 <form action="{% url 'reg'%}" method="post" id = "regForm">
         {% csrf_token %}
-        {{form.as_p}}
+        {{register_form.as_p}}
 
         <button id = "regButton" class = "formButton">Створити акаунт</button>
 </form>
+
+
+
 

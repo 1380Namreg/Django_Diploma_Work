@@ -1,6 +1,6 @@
 {% load static%}
 <form action="{% url 'login' %}" method="post" id = "loginForm">       
         {% csrf_token %}
-        {{form.as_p}}
+        {{login_form.as_p}}
         <button id = "formButton" class = "formButton">Увійти</button>
 </form>

@@ -7,7 +7,7 @@ h1 {
   font-family: GT Walsheim Pro;
   font-weight: 700;
   font-style: Bold;
-  font-size: 34px;
+  font-size: 3.3203125vh;
   line-height: 100%;
   letter-spacing: -1%;
   text-align: center;}
@@ -16,7 +16,7 @@ h1 {
   font-family: GT Walsheim Pro;
   font-weight: 500;
   font-style: Medium;
-  font-size: 24px;
+  font-size: 2.34375vh;
   line-height: 100%;
   letter-spacing: -1%;
   text-align: center;
@@ -26,25 +26,23 @@ h1 {
 
 
 body {
-  border-radius: 20px;
+
 
   overflow: hidden;
-  padding: 0px;
   background: rgba(233, 229, 238, 1);
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  background-position: center center;
-  height: 1024px;
-  max-height: 1024px;
+  background-position: center center; 
+
 }
 
 #laptop_image {
   position: absolute;
-  width: 679.3px;
-  height: 527.1px;
+  width: 31.4490989403vw;
+  height: 46.3098958333vh;
   left: 45.6722222222vw ;
-  top: 17.2vw;
+  top: 15.2vw;
   z-index: -1;
 }
 
@@ -52,47 +50,77 @@ body {
 
 #form_wraper{
   display: flex;
-  width: 387px;
-  border-radius: 20px;
-  padding: 44px;
   flex-direction: column;
-  position: fixed;
-  top: 16.4vw;  
-  left: 17.2vw;
+  position: absolute;
+  width: 17.5462962963vw;
+  max-height: 50.9375vh;
+  padding: 2.03703703704vw; 
+  top: 20.3645833333vh;  
+  left:26.4vw;
+  border-radius: 0.38888888889vw;
   background: white;
-  margin: 100px;
   z-index: 1;
   justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 
+
+
+}
+
+#loginForm p{
+  display: flex;
+  flex-direction: column;
+}
+
+#regForm p{
+  display: flex;
+  flex-direction: column;
   
- 
-
 }
 
 #formContent{
   display: flex;
   flex-direction: row;
+   font-size: 2.34375vh;
+     justify-content: space-between;
 }
 
-
+#id_username, #id_password{
+  height: 2.34375vh;
+  width: 10.87037037037vw
+  ;
+}
+#id_username, #id_password placeholder{
+  font-size: 1.25vw;
+}
+#id_email, #id_password1, #id_password2{
+  height: 2.34375vh;
+  width: 10.87037037037vw;
+}
+#id_email, #id_password1, #id_password2 placeholder{
+  font-size: 1.25vw;
+}
 #choose{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-
+.helptext{
+  font-size: 0;
+}
 
 #header{
   display: flex;
   flex-direction: row;
-  height: 88;
   background: white;
   position: absolute;
   top: 0%;
   left: 0%;
   right: 0%;
-  height: 88px;
+  height: 8.59375vh;
   width:100%;
   align-items:center;
   
@@ -103,16 +131,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;}
+  width: 100%;
+  }
+
+ #Logo{
+  height: 1.171875vh;
+  width: 5.44010416667vw;
+}
+
+.help_text{
+  font-size:0%
+}
+
+
 
 .formButton{
-  width: 80%;
-  height: 40px;
-  left: 44px;
-  top: 460px;
-  border-radius: 60px;
-  background: #5C4D7D;
+  width: 17.5462962963vw;
+  height: 3.90625vh;
+  left: 3.05555555556vw;
+  top: 44.921875vh;
+  border-radius: 4.16666666667vw;
+  background: #543C52;
   color: white;
+  font-size: 1.25vw;
+
 }
 #login,#reg {
     display: inline-block;
@@ -125,5 +167,11 @@ body {
     text-decoration: underline;
     color: black;
     font-weight: 700;
+}
+
+
+
+#regForm ul{
+  font-size: 0%;
 }
 

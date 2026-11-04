@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views.generic import *
 from django.contrib.auth.views import LoginView
-from .forms import UserForm
+from .forms import RegisterForm, LoginForm, VerifyCodeForm
 
 class RegView(CreateView):
     form_class = UserCreationForm
@@ -19,7 +19,10 @@ class AuthView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = {
-            "form":UserForm
+            "register_form": RegisterForm(),
+            "login_form": LoginForm(),
+            "verify_code_form": VerifyCodeForm(),
         }
         return context
 # Create your views here.
+#
