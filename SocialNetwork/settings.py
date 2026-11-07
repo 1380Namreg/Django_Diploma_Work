@@ -18,6 +18,10 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+#  Реалізувати логіку відправлення форм реєстрації та авторизації без оновлення сторінки
+#  Створити модель, що зберігає код підтвердження пошти
+#  На сервері оброблюючи форму реєстрації, робити користувача неактивним та відправляти йому код підтвердження на пошту
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 

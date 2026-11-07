@@ -53,10 +53,10 @@ body {
   flex-direction: column;
   position: absolute;
   width: 17.5462962963vw;
-  max-height: 50.9375vh;
-  padding: 2.03703703704vw; 
   top: 20.3645833333vh;  
   left:26.4vw;
+  max-height: 50.9375vh;
+  padding: 2.03703703704vw; 
   border-radius: 0.38888888889vw;
   background: white;
   z-index: 1;
@@ -89,18 +89,17 @@ body {
 
 #id_username, #id_password{
   height: 2.34375vh;
-  width: 10.87037037037vw
-  ;
+  width: 17.87037037037vw;
 }
 #id_username, #id_password placeholder{
-  font-size: 1.25vw;
+  font-size:  0.75vw;
 }
 #id_email, #id_password1, #id_password2{
   height: 2.34375vh;
-  width: 10.87037037037vw;
+  width: 17.87037037037vw;
 }
 #id_email, #id_password1, #id_password2 placeholder{
-  font-size: 1.25vw;
+  font-size: 0.75vw;
 }
 #choose{
   display: flex;
@@ -123,8 +122,6 @@ body {
   height: 8.59375vh;
   width:100%;
   align-items:center;
-  
-
 } 
 
 #home_link{
@@ -175,3 +172,8 @@ body {
   font-size: 0%;
 }
 
+#container{
+  position:absolute;
+  top: 20.3645833333vh;  
+  left:26.4vw;
+}
