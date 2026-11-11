@@ -141,7 +141,6 @@ body {
 }
 
 
-
 .formButton{
   width: 17.5462962963vw;
   height: 3.90625vh;
@@ -173,7 +172,36 @@ body {
 }
 
 #container{
-  position:absolute;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  max-width: 15.3vw;
   top: 20.3645833333vh;  
   left:26.4vw;
+  max-height: 43.359375vh;
+  padding: 2.03703703704vw; 
+  border-radius: 0.38888888889vw;
+  background: white;
+  z-index: 1;
+  justify-content: space-evenly;
+
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+#container form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#id_code1, #id_code2, #id_code3, #id_code4, #id_code5, #id_code6{
+  height: 4.34375vh;
+  width: 2dvh;
+}
+
+#container form label {
+
+    font-size:0%;
+  
+
 }

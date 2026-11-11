@@ -21,14 +21,14 @@ class RegView(CreateView):
         verify_code.generate_code()
 
         self.request.session["email"] = user.email
-        return JsonResponse({"succes": True, "email": user.email})
+        return JsonResponse({"success": True, "email": user.email})
 
     def form_invalid(self, form):
-        return JsonResponse({"succes": False, "errors": form.errors})
+        return JsonResponse({"success": False, "errors": form.errors})
 
 
 class CustomLoginView(LoginView):
-    form_class = LoginForm()
+    form_class = LoginForm
 
     def form_valid(self, form):
         user = form.get_user()

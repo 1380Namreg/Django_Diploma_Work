@@ -6,11 +6,11 @@ const loginText = document.getElementById('login');
 const regText = document.getElementById('reg');
 const FuckingP=document.querySelectorAll('p:empty');
 const ul = document.querySelectorAll("ul")
-const formWrapper = document.getElementById("form_wraper")
+
+const formWrapper=document.querySelector('#form_wraper');
 
 
-
-BlockVerificateForm.hidden = true
+BlockVerificateForm.style.display = 'none';
 
 
 function show(show_form){
@@ -62,9 +62,9 @@ function sendingForm(form, resultFunc){
 }
 
 sendingForm(RegisterForm, (data)=>{
-    if (data.succes){
-        formWrapper.hidden = true
-        BlockVerificateForm.hidden = false
+    if (data.success){
+        formWrapper.style.display = 'none';
+        BlockVerificateForm.style.display = 'flex';
     }
     else{
         console.log(data.errors)
@@ -72,9 +72,9 @@ sendingForm(RegisterForm, (data)=>{
 })
 
 sendingForm(VerificateForm, (data)=>{
-    if (data.succe){
-        BlockVerificateForm.hidden = true
-        formWrapper.hidden = false
+    if (data.success){
+        formWrapper.style.display = 'flex';
+        BlockVerificateForm.style.display = 'none';
         show(false)
     }
     else{
@@ -83,7 +83,7 @@ sendingForm(VerificateForm, (data)=>{
 })
 
 sendingForm(LoginForm, (data)=>{
-    if (data.succes){
+    if (data.success){
         window.location.href = "/"
     }
     else{
