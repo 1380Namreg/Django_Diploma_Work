@@ -57,8 +57,10 @@ class VerifyCode(models.Model):
         self.save()
 
     def is_valid(self):
+        print("Fuck you bitch sosi kirpich")
         delta = timezone.now() - self.created_at
         if delta.total_seconds() < (5 * 60):
             return True
+            print("Fuck you bitch sosi kirpich 1")
         return False
-
+        print("Fuck you bitch sosi kirpich ok")

@@ -32,36 +32,35 @@ class VerifyCodeForm(forms.Form):
     code1 = forms.CharField(
         max_length=1,
         required=True,
-        widget=forms.TextInput(),
-        label="Код підтвердження"
+        widget=forms.TextInput()
     )
     code2 = forms.CharField(
         max_length=1,
         required=True,
-        widget=forms.TextInput(),
+        widget=forms.TextInput()
 
     )
     code3 = forms.CharField(
         max_length=1,
         required=True,
-        widget=forms.TextInput(),
+        widget=forms.TextInput()
 
     )
     code4 = forms.CharField(
         max_length=1,
         required=True,
-        widget=forms.TextInput(),
+        widget=forms.TextInput()
 
     )
     code5 = forms.CharField(
         max_length=1,
         required=True,
-        widget=forms.TextInput(),
+        widget=forms.TextInput()
 
     )
     code6 = forms.CharField(
         max_length=1,
         required=True,
-        widget=forms.TextInput(),
+        widget=forms.TextInput()
 
     )

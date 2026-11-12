@@ -1,10 +1,28 @@
 
-h1 {
-  font-family: "GT Walsheim Pro", sans-serif;
+
+
+@font-face{
+  font-family: "GT Walsheim Pro";
+  src: url("..user_app/fonts/gt-walsheim-pro/GT-Walsheim-Pro-Bold.woff2") format("woff2"),
+       url("..user_app/fonts/gt-walsheim-pro/GT-Walsheim-Pro-Bold.woff") format("woff");
 }
 
+*{
+  font-family: "GT Walsheim Pro", sans-serif;
+}
 .title{
-  font-family: GT Walsheim Pro;
+    font-family: "GT Walsheim Pro", sans-serif;
+}
+
+#formTitle{
+    font-family: "GT Walsheim Pro", sans-serif;
+} 
+
+p{
+    font-family: "GT Walsheim Pro", sans-serif;
+}
+.title{
+  font-family: "GT Walsheim Pro";
   font-weight: 700;
   font-style: Bold;
   font-size: 3.3203125vh;
@@ -33,7 +51,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  background-position: center center; 
+  background-position: center center;
 
 }
 
@@ -53,10 +71,10 @@ body {
   flex-direction: column;
   position: absolute;
   width: 17.5462962963vw;
-  top: 20.3645833333vh;  
+  top: 20.3645833333vh;
   left:26.4vw;
   max-height: 50.9375vh;
-  padding: 2.03703703704vw; 
+  padding: 2.03703703704vw;
   border-radius: 0.38888888889vw;
   background: white;
   z-index: 1;
@@ -77,7 +95,7 @@ body {
 #regForm p{
   display: flex;
   flex-direction: column;
-  
+
 }
 
 #formContent{
@@ -122,7 +140,7 @@ body {
   height: 8.59375vh;
   width:100%;
   align-items:center;
-} 
+}
 
 #home_link{
   display: flex;
@@ -150,14 +168,14 @@ body {
   background: #543C52;
   color: white;
   font-size: 1.25vw;
-
+  padding: 0px;
 }
 #login,#reg {
     display: inline-block;
-    
+
     font-weight: 600;
     color: #a4a1a1;
-    
+
 }
 #login.active,#reg.active {
     text-decoration: underline;
@@ -172,21 +190,22 @@ body {
 }
 
 #container{
+  /* width: 30.5462962963vw; */
   display: flex;
-  flex-direction: column;
+  max-width: 17.5462962963vw;
+
   position: absolute;
-  max-width: 15.3vw;
-  top: 20.3645833333vh;  
+  top: 20.3645833333vh;
   left:26.4vw;
-  max-height: 43.359375vh;
-  padding: 2.03703703704vw; 
+
+  padding: 2.03703703704vw;
   border-radius: 0.38888888889vw;
   background: white;
   z-index: 1;
   justify-content: space-evenly;
-
+  align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
+
 
 }
 #container form{
@@ -202,6 +221,30 @@ body {
 #container form label {
 
     font-size:0%;
-  
+
+
+}
+
+
+#container form button {
+  width: 17.5462962963vw;
+  height: 3.90625vh;
+  padding: 0px;
+  border-radius: 4.16666666667vw;
+  background: #543C52;
+  color: white;
+  font-size: 1.25vw;
+  position: absolute;
+
+
+
+}
+
+
+#container form input {
+    border-radius: 0.36666666667vw;
+    height: 3.34375vh;
+    width: 1.8462962963vw;
+    border: 1px solid rgba(205, 206, 210, 1);
 
 }

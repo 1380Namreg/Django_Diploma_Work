@@ -41,11 +41,23 @@ class CustomLoginView(LoginView):
     def form_invalid(self, form):
         return JsonResponse({"success": False, "errors": form.errors})
 
-class VerificateFormView(FormView):
+class VerifyCodeFormView(FormView):
     form_class = VerifyCodeForm
+
     def form_valid(self, form: VerifyCodeForm):
-        code = form.cleaned_data.get("code")
-        verify_code = VerifyCode.objects.filter(code = code).first()
+
+        
+        code1 = form.cleaned_data.get("code1")
+        code2 = form.cleaned_data.get("code2")
+        code3 = form.cleaned_data.get("code3")
+        code4 = form.cleaned_data.get("code4")
+        code5 = form.cleaned_data.get("code5")
+        code6 = form.cleaned_data.get("code6")
+        print(code1, code2, code3, code4, code5, code6)
+        code = f'{code1}{code2}{code3}{code4}{code5}{code6}'
+        print(code)
+        verify_code =VerifyCode.objects.filter(code = code).first()
+
         
         if verify_code and verify_code.is_valid():
             verify_code.user.is_active = True
@@ -54,9 +66,11 @@ class VerificateFormView(FormView):
             verify_code.delete()
             return JsonResponse({"success": True})
         else:
-            form.add_error("code", "Такого коду не існує, або його час вичерпано.")
+            form.add_error("code", "Такого коду не існує, або його час вичерапно.")
             return self.form_invalid(form)
+        
     def form_invalid(self, form):
+        print("AAAAAAAAAAAAAAAAA")
         return JsonResponse({"success": False, "errors": form.errors})
 
 class AuthView(TemplateView):

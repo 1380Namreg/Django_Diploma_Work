@@ -10,8 +10,8 @@ const ul = document.querySelectorAll("ul")
 const formWrapper=document.querySelector('#form_wraper');
 
 
-BlockVerificateForm.style.display = 'none';
-
+formWrapper.style.display  = 'flex';
+BlockVerificateForm.style.display ='none' ;
 
 function show(show_form){
     LoginForm.hidden = !show_form;
@@ -90,3 +90,10 @@ sendingForm(LoginForm, (data)=>{
         console.log(data.errors)
     }
 })
+function autoNext(field, nextField) {
+  field.addEventListener('input', () => {
+    if (field.value.length >= field.maxLength) {
+      nextField.focus();
+    }
+  });
+}

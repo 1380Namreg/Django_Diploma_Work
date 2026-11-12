@@ -5,11 +5,11 @@
     <h2>Підтвердження електронної пошти</h2>
     <p>На вашу електронну пошту надіслано код підтвердження. Будь ласка, введіть його нижче:</p>
     <p id = "sayCode">Код підтвердження:</p>
-        <form method="post" action="{% url 'verify_email' %} id = verificateForm">
-            {% csrf_token %}
-            {{ verify_code_form.as_p }}
-            <button type="submit" class="formButton">Підтвердити</button>
+        <form method="post" action="{% url 'verify_email' %}" id = "verificateForm">
+            {% csrf_token %} 
+           {{ verify_code_form.as_p }}
         </form>
+        <button type="submit" class="formButton">Підтвердити</button>
 </div>
 
 {% endblock %}
