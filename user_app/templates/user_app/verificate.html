@@ -1,15 +1,23 @@
 {% extends "base.html" %}
-
+{% load static%}
 {% block content %}
 <div id="container">
     <h2>Підтвердження електронної пошти</h2>
-    <p>На вашу електронну пошту надіслано код підтвердження. Будь ласка, введіть його нижче:</p>
-    <p id = "sayCode">Код підтвердження:</p>
+    <p>Ми надіслали 6-значний код на вашу пошту <b>
+        {% if email %} ({{ email }}){% endif %}
+    </b>. Введіть його нижче, щоб підтвердити акаунт</p>
         <form method="post" action="{% url 'verify_email' %}" id = "verificateForm">
+            <div id="codeInputs">
             {% csrf_token %} 
-           {{ verify_code_form.as_p }}
+            {{ verify_code_form.as_p }}
+            </div>
+            <div id = "buttonWrapper">
+            <button type="submit" class="formButton">Підтвердити</button>
+            <a type="button"  id = "GoBackButton">Назад</a>
+            </div>
+
         </form>
-        <button type="submit" class="formButton">Підтвердити</button>
+    
 </div>
 
 {% endblock %}

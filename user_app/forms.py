@@ -26,7 +26,11 @@ class LoginForm(AuthenticationForm):
         label="Електронна пошта",
         widget=forms.EmailInput(attrs={"placeholder": "you@example.com"})
     )  
-
+    # password = SetPasswordMixin.create_password_fields("Пароль")
+    password = forms.CharField(
+        label="Пароль",
+        widget=forms.PasswordInput
+    )
 
 class VerifyCodeForm(forms.Form):
     code1 = forms.CharField(

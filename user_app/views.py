@@ -70,17 +70,18 @@ class VerifyCodeFormView(FormView):
             return self.form_invalid(form)
         
     def form_invalid(self, form):
-        print("AAAAAAAAAAAAAAAAA")
         return JsonResponse({"success": False, "errors": form.errors})
 
 class AuthView(TemplateView):
     template_name = "user_app/auth.html"
 
     def get_context_data(self, **kwargs):
+        email = self.request.session.get('email')
         context = {
             "register_form": RegisterForm(),
             "login_form": LoginForm(),
             "verify_code_form": VerifyCodeForm(),
+            "email": email
         }
         return context
 # Create your views here.

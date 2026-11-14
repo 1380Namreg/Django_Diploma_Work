@@ -14,10 +14,12 @@ const codeInput4 = document.getElementById("id_code4");
 const codeInput5 = document.getElementById("id_code5");
 const codeInput6 = document.getElementById("id_code6");
 
+
+
 codeInputList = [codeInput1, codeInput2, codeInput3, codeInput4, codeInput5, codeInput6]
 
-formWrapper.style.display  = 'flex';
-BlockVerificateForm.style.display ='none' ;
+formWrapper.style.display  = 'none';
+BlockVerificateForm.style.display ='flex' ;
 
 function show(show_form){
     LoginForm.hidden = !show_form;
@@ -29,7 +31,11 @@ function show(show_form){
 }
 
 document.getElementById("login").addEventListener('click', () => show(true));
-
+document.getElementById("GoBackButton").addEventListener('click', () => {
+    BlockVerificateForm.style.display ='none' ;
+    formWrapper.style.display  = 'flex';
+    show(false)
+});
 document.getElementById("reg").addEventListener('click', () => show(false));
     
 show(true);
@@ -120,3 +126,6 @@ for (let i = 0; i < codeInputList.length; i++) {
         }
     });
 }
+
+
+
