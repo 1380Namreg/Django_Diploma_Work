@@ -1,0 +1,57 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% block links %}
+    {% endblock %}
+</head>
+<body>
+    <nav id="top_menu">
+        <a href="/" id="home_link">
+             <img src="{% static 'user_app/media/img/Logo.png' %}" id="Logo">
+        </a>
+
+
+        <div id = 'menu'>
+            <a href="/" id="home_link">
+                 <img src="{% static 'user_app/media/img/home_menu_button.png' %}" id="home">
+            </a>
+            <a href="/" id="home_link">
+                <img src="{% static 'user_app/media/img/posts_menu_button.png' %}" id="my_posts">
+        </a> 
+        <a href="/" id="home_link">
+             <img src="{% static 'user_app/media/img/freinds_menu_button.png' %}" id="friends">
+        </a> 
+        <a href="/" id="home_link">
+             <img src="{% static 'user_app/media/img/chats_menu_button.png' %}" id="chats">
+        </a> 
+        <a href="/" id="home_link">
+             <img src="{% static 'user_app/media/img/settings_menu_button.png' %}" id="settings">
+        </a> 
+        <a href="/logout" id="home_link">
+             <img src="{% static 'user_app/media/img/logout_button.png' %}" id="Logout_button">
+        </a> 
+
+        </div>
+    </nav>
+    <div id='content'>
+        <div id='user_info'>
+            <h1>user_info</h1>
+                {% block user_content %}
+                {% endblock %}
+        </div>
+        <div id='posts'>
+            post
+                {% block posts_content %}
+                {% endblock %}
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>

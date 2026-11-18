@@ -1,0 +1,60 @@
+body {
+  background: rgba(233, 229, 238, 1);
+  margin: 0;
+  overflow: hidden; /* Locks the main window scroll */
+}
+
+#top_menu {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8.59375vh;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+}
+
+#menu {  
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+#Logo {
+  height: 2.171875vh;
+  width: 9.44010416667vw;
+}
+
+#content {
+  position: absolute;
+  top: 8.59375vh; /* Starts right below the fixed top menu */
+  left: 10%;
+  width: 80%;
+  height: calc(100vh - 8.59375vh); /* Fills the exact remaining vertical space */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+/* Fixed: Stays completely static on screen */
+#user_info {
+  width: 45%;
+  background: rgb(120, 82, 82);
+  height: 100%;
+  overflow: hidden; 
+}
+
+/* Scrollable: Only this section scrolls when content is long */
+#posts {
+  width: 50%;
+  background: rgb(20, 20, 163);
+  height: 100%;
+  overflow-y: auto; /* Turns on vertical scrolling only here */
+}

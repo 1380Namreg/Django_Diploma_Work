@@ -13,13 +13,15 @@ const codeInput3 = document.getElementById("id_code3");
 const codeInput4 = document.getElementById("id_code4");
 const codeInput5 = document.getElementById("id_code5");
 const codeInput6 = document.getElementById("id_code6");
+const dataError = document.querySelector("#dataError")
+const hidden = document.querySelectorAll(".hidden") !== null
 
-
+hidden.hidden = true;
 
 codeInputList = [codeInput1, codeInput2, codeInput3, codeInput4, codeInput5, codeInput6]
 
-formWrapper.style.display  = 'none';
-BlockVerificateForm.style.display ='flex' ;
+formWrapper.style.display  = 'flex';
+BlockVerificateForm.style.display ='none' ;
 
 function show(show_form){
     LoginForm.hidden = !show_form;
@@ -79,7 +81,13 @@ sendingForm(RegisterForm, (data)=>{
         BlockVerificateForm.style.display = 'flex';
     }
     else{
+        if (dataError.textContent.trim() === ''){
+        dataError.hidden = false;
+        Object.values(data.errors).forEach(messages => {
+        dataError.append(messages.join(', '));
         console.log(data.errors)
+        });
+        }
     }
 })
 
@@ -90,7 +98,12 @@ sendingForm(VerificateForm, (data)=>{
         show(false)
     }
     else{
-        console.log(data.errors)
+        if (dataError.textContent.trim() === ''){
+        dataError.hidden = false;
+        Object.values(data.errors).forEach(messages => {
+        dataError.append(messages.join(', '));
+        });
+        }
     }
 })
 
@@ -99,7 +112,12 @@ sendingForm(LoginForm, (data)=>{
         window.location.href = "/"
     }
     else{
-        console.log(data.errors)
+        if (dataError.textContent.trim() === ''){
+        dataError.hidden = false;
+        Object.values(data.errors).forEach(messages => {
+        dataError.append(messages.join(', '));
+        });
+        }
     }
 })
 
@@ -126,6 +144,4 @@ for (let i = 0; i < codeInputList.length; i++) {
         }
     });
 }
-
-
 

@@ -8,6 +8,8 @@ from .forms import RegisterForm, LoginForm, VerifyCodeForm
 from django.http import JsonResponse
 from .models import VerifyCode
 
+ 
+
 SESSION_KEY = 'pending_user_id'
 class RegView(CreateView):
     form_class = RegisterForm
@@ -86,3 +88,5 @@ class AuthView(TemplateView):
         return context
 # Create your views here.
 #
+
+    

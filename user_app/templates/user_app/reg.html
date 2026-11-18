@@ -1,8 +1,19 @@
 {% load static%}
 <form action="{% url 'reg'%}" method="post" id = "regForm">
         {% csrf_token %}
-        {{register_form.as_p}}
-
+        <span id = "emailInput">
+                {{register_form.email.label}}
+                {{register_form.email}}
+        </span>
+        <span id = "PasswordInput">
+                {{register_form.password1.label}}
+                {{register_form.password1}}
+        </span >
+        <span id = "checkPasswordInput">
+                {{register_form.password2.label}}
+                {{register_form.password2}}
+        </span>
+        <p id = "dataError" class = "hidden"></p>
         <button id = "regButton" class = "formButton">Створити акаунт</button>
 </form>
 
