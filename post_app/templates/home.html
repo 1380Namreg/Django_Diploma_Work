@@ -1,12 +1,81 @@
 {% extends "base_post.html"%}
 {% load static %}
 {% block user_content %}
-<h1>test</h1>
-<div>
-    
+<div id='profile_info'>
+    <div id='profile'>
+    <img src="{% static 'user_app/media/img/Size=L.png' %}" id="avatar">
+    <h2 id='name'>Lina Li</h2>
+    <p id='user_name'>@thelili</p>
+    </div>
+    <div id='info_counter'>
+        <span id='dopus'>
+            <p class='counter'>67</p>
+            <p class='counter_title'>Допис</p>
+        </span>
+        <div class='line'>|</div>
+        <span id='readers'>
+            <p class='counter'>69</p>
+            <p class='counter_title'>Читачі</p>
+        </span>
+        <div class='line'>|</div>
+        <span id='freinds'>
+            <p class='counter'>228</p>
+            <p class='counter_title'>Друзі</p>
+        </span>
+    </div>
 </div>
 {% endblock %}
+{%block posts_content%}
 
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1><h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1><h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+
+{% endblock %}
 {% block links %}
 <link rel="stylesheet" href="{% static 'post_app/css/post.css'%}">
 {% endblock %}
