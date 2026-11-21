@@ -5,10 +5,9 @@ from django.urls import reverse_lazy
 from django.views.generic import *
 from django.contrib.auth.views import LoginView
 from .forms import RegisterForm, LoginForm, VerifyCodeForm
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseRedirect
 from .models import VerifyCode
-
- 
+from django.contrib.auth.views import LogoutView    
 
 SESSION_KEY = 'pending_user_id'
 class RegView(CreateView):
@@ -86,6 +85,8 @@ class AuthView(TemplateView):
             "email": email
         }
         return context
+
+
 # Create your views here.
 #
 

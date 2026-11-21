@@ -109,7 +109,7 @@ sendingForm(VerificateForm, (data)=>{
 
 sendingForm(LoginForm, (data)=>{
     if (data.success){
-        window.location.href = "/"
+        window.location.href = "/posts"
     }
     else{
         if (dataError.textContent.trim() === ''){
